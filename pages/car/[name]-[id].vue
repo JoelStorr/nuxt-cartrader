@@ -1,12 +1,13 @@
 <script setup>
+
+
 const route = useRoute();
+const {toTitleCase} = useUtilities();
 useHead({
   title: toTitleCase(route.params.name),
 });
 
-function toTitleCase(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
 
 definePageMeta({
   layout: "custom",
