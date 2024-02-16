@@ -1,6 +1,11 @@
 <script setup>
+import { navigateTo, useSupabaseUser } from '#imports';
+
 definePageMeta({
   layout: "custom",
+  middleware: [
+    'auth'
+  ]
 });
 
 const { listings } = useCars();
