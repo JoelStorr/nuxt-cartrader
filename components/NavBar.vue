@@ -1,5 +1,5 @@
 <script setup>
-import { useSupabaseClient, useSupabaseUser } from '#imports';
+import { navigateTo, useSupabaseClient, useSupabaseUser } from '#imports';
 
   const supabase = useSupabaseClient();
   const user = useSupabaseUser();
@@ -7,6 +7,10 @@ import { useSupabaseClient, useSupabaseUser } from '#imports';
 
  async function logout(){
     const { error } = await supabase.auth.signOut()
+
+    navigateTo("/")
+
+
   }
 
 </script>
