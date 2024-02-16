@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 
 
 const route = useRoute();
@@ -7,7 +7,7 @@ useHead({
   title: toTitleCase(route.params.name),
 });
 
-
+  
 
 definePageMeta({
   layout: "custom",

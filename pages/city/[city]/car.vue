@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 const route = useRoute();
 const {toTitleCase} = useUtilities();
 useHead({
@@ -6,6 +6,8 @@ useHead({
     route.params.make ? toTitleCase(route.params.make) : "Cars"
   } in ${toTitleCase(route.params.city)}`,
 });
+
+  
 
 
 definePageMeta({
