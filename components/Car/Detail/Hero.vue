@@ -1,17 +1,12 @@
 <script setup>
-    const props = defineProps({
-        car: Object,
-    });
-
+const props = defineProps({
+  car: Object,
+});
 </script>
 
 <template>
   <div class="mt-10">
-    <NuxtImg
-      :src="car.url"
-      class="w-full"
-      alt=""
-    />
+    <NuxtImg :src="car.url" class="w-full" alt="" />
     <h1 class="mt-10 text-4xl">{{ car.name }}</h1>
     <div class="text-slate-500 flex text-lg mt-3 border-b pb-5 justify-between">
       <div class="flex">

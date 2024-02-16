@@ -1,11 +1,11 @@
-export const useUtilities = ()=>{
+export const useUtilities = () => {
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
 
-    function toTitleCase(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-    return {
-        toTitleCase,
-    }
-
-}
+  return {
+    toTitleCase,
+  };
+};

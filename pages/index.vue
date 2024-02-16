@@ -1,16 +1,12 @@
 <script setup>
-    useHead({
-        title: "Cartrader",
-
-    });
-
+useHead({
+  title: "Cartrader",
+});
 </script>
 
-
 <template>
-<div>
-    
+  <div>
     <CarHero />
-</div>
-
+  </div>
 </template>
+  
