@@ -6,4 +6,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/supabase",
   ],
+  supabase: {
+    redirect: true,
+    redirectOptions: {
+      login: "/login",
+      callback: "/confirm",
+      exclude: ["/", "/city/*"],
+      cookieRedirect: false,
+    },
+  },
 });
