@@ -30,6 +30,10 @@
             options:{}
         })
 
+        emailRegister.value = ""
+        passwordRegister = ""
+        passwordConfirm.value = ""
+
     }
 
 
@@ -44,6 +48,9 @@
             password: passwordLogin.value,
             options:{}
         })
+
+        emailLogin.value = ""
+        passwordLogin.value = ""
 
     }
 

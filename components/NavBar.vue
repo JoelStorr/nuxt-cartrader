@@ -1,3 +1,17 @@
+<script setup>
+import { useSupabaseClient, useSupabaseUser } from '#imports';
+
+  const supabase = useSupabaseClient();
+  const user = useSupabaseUser();
+
+
+ async function logout(){
+    const { error } = await supabase.auth.signOut()
+  }
+
+</script>
+
+
 <template>
   <header
     class="
@@ -15,5 +29,10 @@
     "
   >
     <NuxtLink class="text-3xl font-mono" to="/">cartrader</NuxtLink>
+    <div v-if="user" class="flex">
+      <NuxtLink to="/profile/listings" class="mr-5">Profile</NuxtLink>
+      <p class="cursor-pointer" @click="logout">Logout</p>
+    </div>
+    <NuxtLink v-else to="/login">Login</NuxtLink>
   </header>
 </template>
