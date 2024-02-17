@@ -35,7 +35,9 @@ export default defineEventHandler(async (event)=>{
             message,
             email,
             phone,
-            listingId: parseInt(listingId)
+            name,
+            listingId: parseInt(listingId),
+            
         }
     })
 })

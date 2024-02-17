@@ -90,7 +90,7 @@ const handleSubmit = async ()=>{
     miles: parseInt(info.value.miles),
     price: parseInt(info.value.price),
     year: parseInt(info.value.year),
-    name: `${info.value.make} ${info.value.city.model}`,
+    name: `${info.value.make} ${info.value.model}`,
     image: "eiorfjskldf",
     listerId: user.value.id
   }
